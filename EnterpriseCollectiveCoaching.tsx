@@ -33,7 +33,7 @@ const items = [
 function EnterpriseCollectiveCoaching() {
   return (
     <Box
-      id="highlights"
+      id="EnterpriseCollectiveCoaching"
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
@@ -57,16 +57,16 @@ function EnterpriseCollectiveCoaching() {
           }}
         >
           <h2>
-            <Typography component="h2" variant="h4">
+            <Typography component="h2" variant="h2">
               Le sport, clé de votre performance collective
             </Typography>
           </h2>
-          <Typography variant="body1" sx={{ color: "grey.400" }}>
+          <Typography variant="body2" sx={{ color: "grey.400" }}>
             En choisissant FIT ON THE ROAD, vous investissez dans le capital
             humain de votre entreprise. Nos cours collectifs sur site sont
             animés par des coachs professionnels et diplômés.
           </Typography>
-          <Typography variant="body1" sx={{ color: "grey.400" }}>
+          <Typography variant="body2" sx={{ color: "grey.400" }}>
             Nos programmes sont conçus pour réduire le stress, améliorer la
             santé physique et mentale, et favoriser une atmosphère positive.
           </Typography>
