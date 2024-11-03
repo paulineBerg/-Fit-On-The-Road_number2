@@ -3,12 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 import { alpha, Box, Button, Container, Typography } from "@mui/material";
 
-import LogoCollection from "@app/modules/LogoCollection";
 import { UserType } from "@app/types/types";
 import Contact from "@shared/Contact";
-import EnterpriseCollectiveCoaching from "@app/modules/EnterpriseCollectiveCoaching";
-import EnterpriseTeamBuilding from "@app/modules/EnterpriseTeamBuilding";
-import EnterpriseSpaceCreation from "@app/modules/EnterpriseSpaceCreation";
+import TermsGeneralTerms from "@app/modules/termsGeneralTerms";
+import TermsLegalTerms from "@app/modules/TermsLegalTerms";
+import TermsPrivacyTerms from "@app/modules/TermsPrivacyTerms";
 
 const logoStyle = {
   width: "140px",
@@ -16,12 +15,12 @@ const logoStyle = {
   cursor: "pointer",
 };
 
-function Entreprises() {
+function Terms() {
   const navigate = useNavigate();
 
   return (
     <Box
-      id="hero"
+      id="terms"
       sx={{
         width: "100%",
         minHeight: "50%",
@@ -53,21 +52,12 @@ function Entreprises() {
               color: "primary.light",
             }}
           >
-            FIT ON THE ROAD, la salle de sport en entreprise
+            FIT ON THE ROAD OFFICIEL
           </Typography>
         </h1>
-        <LogoCollection />
-        <EnterpriseCollectiveCoaching />
-        <EnterpriseTeamBuilding />
-        <EnterpriseSpaceCreation />
-        <Typography
-          textAlign="center"
-          color="text.secondary"
-          sx={{ alignSelf: "center", width: { sm: "100%", md: "80%" } }}
-        >
-          Prêt à transformer votre entreprise grâce au sport ? Contactez-nous
-          dès maintenant pour une étude personnalisée de vos besoins.
-        </Typography>
+        <TermsPrivacyTerms />
+        <TermsGeneralTerms />
+        <TermsLegalTerms />
         <Button
           variant="text"
           sx={{ borderRadius: "999px" }}
@@ -85,4 +75,4 @@ function Entreprises() {
   );
 }
 
-export default Entreprises;
+export default Terms;

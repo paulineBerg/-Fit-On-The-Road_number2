@@ -3,20 +3,16 @@ import { useNavigate } from "react-router-dom";
 
 import { alpha, Box, Button, Container, Typography } from "@mui/material";
 
-import LogoCollection from "@app/modules/LogoCollection";
-import { UserType } from "@app/types/types";
 import Contact from "@shared/Contact";
-import EnterpriseCollectiveCoaching from "@app/modules/EnterpriseCollectiveCoaching";
-import EnterpriseTeamBuilding from "@app/modules/EnterpriseTeamBuilding";
-import EnterpriseSpaceCreation from "@app/modules/EnterpriseSpaceCreation";
+import { UserType } from "@app/types/types";
 
 const logoStyle = {
-  width: "140px",
+  width: "280px",
   height: "auto",
   cursor: "pointer",
 };
 
-function Entreprises() {
+function Particuliers() {
   const navigate = useNavigate();
 
   return (
@@ -37,6 +33,7 @@ function Entreprises() {
           flexDirection: "column",
           alignItems: "center",
           height: "100%",
+          gap: 4,
           pt: { xs: 14, sm: 20 },
           pb: { xs: 8, sm: 12 },
         }}
@@ -53,20 +50,15 @@ function Entreprises() {
               color: "primary.light",
             }}
           >
-            FIT ON THE ROAD, la salle de sport en entreprise
+            La salle de sport qui vient à toi.
           </Typography>
         </h1>
-        <LogoCollection />
-        <EnterpriseCollectiveCoaching />
-        <EnterpriseTeamBuilding />
-        <EnterpriseSpaceCreation />
         <Typography
           textAlign="center"
           color="text.secondary"
           sx={{ alignSelf: "center", width: { sm: "100%", md: "80%" } }}
         >
-          Prêt à transformer votre entreprise grâce au sport ? Contactez-nous
-          dès maintenant pour une étude personnalisée de vos besoins.
+          En construction ! 😉
         </Typography>
         <Button
           variant="text"
@@ -74,15 +66,15 @@ function Entreprises() {
           onClick={() => navigate("/")}
         >
           <img
-            src="/logos/Full - Long - Kettle - Fond noir.svg"
+            src="/logos/Full - Long - Skull - Fond noir.svg"
             style={logoStyle}
             alt="logo fit on the road"
           />
         </Button>
-        <Contact defaultUserType={UserType.ENTERPRISE} />
+        <Contact defaultUserType={UserType.INDIVIDUAL} />
       </Container>
     </Box>
   );
 }
 
-export default Entreprises;
+export default Particuliers;
