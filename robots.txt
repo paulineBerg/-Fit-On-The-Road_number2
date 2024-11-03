@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://fit-ontheroad.fr/sitemap.xml
